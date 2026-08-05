@@ -1,2 +1,2 @@
 # Amway-autonext
-Used for automatically advancing through Amway Vietnam MLM and company policy lessons
+Automates slide/lesson navigation while studying Amway Vietnam's MLM and company policies
