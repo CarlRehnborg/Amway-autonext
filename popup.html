@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amway AutoNext</title>
+    <style>
+      body {
+        width: 260px;
+        margin: 0;
+        padding: 14px;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        font-size: 13px;
+        color: #1c1c1e;
+        background: #fff;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        color: #005eb8;
+      }
+      .khoi {
+        margin-bottom: 12px;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+      #tocDo {
+        width: 100%;
+        margin: 0;
+      }
+      .nhan-toc-do {
+        margin-top: 4px;
+        text-align: center;
+        font-variant-numeric: tabular-nums;
+        color: #444;
+      }
+      .nut-hang {
+        display: flex;
+        gap: 8px;
+      }
+      button {
+        flex: 1;
+        padding: 8px 0;
+        font-size: 13px;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #fff;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      #btnBatDau {
+        background: #1a9c4b;
+      }
+      #btnDung {
+        background: #d13b3b;
+      }
+      .thong-tin {
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid #e5e5e5;
+        line-height: 1.7;
+      }
+      .thong-tin span {
+        font-weight: 600;
+      }
+      #trangThai.dang-chay {
+        color: #1a9c4b;
+      }
+      #trangThai.da-dung {
+        color: #d13b3b;
+      }
+      #loi {
+        margin-top: 8px;
+        color: #d13b3b;
+        line-height: 1.5;
+      }
+      #loi:empty {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Amway AutoNext</h1>
+
+    <div class="khoi">
+      <label for="tocDo">Tốc độ bấm</label>
+      <input type="range" id="tocDo" min="0" max="3" step="1" value="2" />
+      <div class="nhan-toc-do">Mỗi <span id="nhanTocDo">1500</span> ms</div>
+    </div>
+
+    <div class="nut-hang">
+      <button id="btnBatDau" type="button">▶ Bắt đầu</button>
+      <button id="btnDung" type="button">⏹ Dừng</button>
+    </div>
+
+    <div class="thong-tin">
+      <div>Số lần đã bấm: <span id="soLan">0</span></div>
+      <div>Trạng thái: <span id="trangThai" class="da-dung">Đã dừng</span></div>
+    </div>
+
+    <div id="loi"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
